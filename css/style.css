@@ -209,8 +209,7 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative;
-  height: 50rem; }
+  position: relative; }
   .card__side {
     color: #fff;
     font-size: 2rem;
@@ -220,12 +219,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
-      background-color: orangered; }
+      background-color: #fff; }
     .card__side--back {
-      background-color: green;
       transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
