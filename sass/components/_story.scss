@@ -4,14 +4,30 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: $color-white;
     padding: 6rem;
+    padding-left: 9rem;
     border-radius: 3px;
     font-size: $default-font-size;
 
+    transform: skewX(-12deg);
+
     &__shape {
-        background-color: orangered;
         height: 15rem;
         width: 15rem; 
         float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+
+        transform: translate(-3rem,0) skewX(12deg);
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+
+    &__img {
+        height: 100%;
     }
 } 

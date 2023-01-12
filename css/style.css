@@ -317,14 +317,23 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 6rem;
+  padding-left: 9rem;
   border-radius: 3px;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
   .story__shape {
-    background-color: orangered;
     height: 15rem;
     width: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%); }
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translate(-3rem, 0) skewX(12deg); }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__img {
+    height: 100%; }
 
 .header {
   height: 95vh;
