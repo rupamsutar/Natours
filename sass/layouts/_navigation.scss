@@ -15,6 +15,8 @@
         z-index: 10;
 
         box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -98,5 +100,57 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         visibility: visible;
+    }
+
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        backface-visibility: hidden;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2.5px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            top: -0.8rem;
+        }
+        &::after {
+            top: 0.8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
     }
 } 
