@@ -13,6 +13,8 @@
         top: 6rem;
         right: 6rem;
         z-index: 10;
+
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     }
 
     &__background {
@@ -26,8 +28,9 @@
         right: 6.5rem;
 
         z-index: 5;
+        transition: transform 0.5s;
 
-        transform: scale(80);
+        // transform: scale(80);
     }
 
     &__nav {
@@ -37,6 +40,11 @@
         top: 0;
         right: 0;
         z-index: 6;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 0.5s ease-out;
     }
 
     &__list {
@@ -82,5 +90,13 @@
             color: $color-primary;
         }
         
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        visibility: visible;
     }
 } 
