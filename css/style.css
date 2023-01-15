@@ -1,3 +1,17 @@
+/* 
+0 - 600: mobile
+600 - 900: tablet portrait
+900 - 1200: tablet landscape
+1200 - 1800: Normal styles
+1800 + : Big Desktops
+*/
+/*
+-phone
+-tab-port
+-tab-land
+-big-dektop
+
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +21,22 @@
 
 html {
   font-size: 62.5%; }
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+
+  @media (max-width: 900px) {
+    html {
+      font-size: 60%; } }
+
+  @media (max-width: 1200) {
+    html {
+      font-size: 70%; } }
+      
+  @media (min-width: 1800) {
+    html {
+      font-size: 80%; } }
 
 body {
   box-sizing: border-box; }
