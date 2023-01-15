@@ -4,10 +4,10 @@
     ,url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 
     @include respond(phone) {
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     }
 
     position: relative;
