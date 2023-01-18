@@ -8,19 +8,48 @@
         outline-offset: 2rem;
         transition: all 0.2s;
 
+        @include respond(tab-port) {
+            float: left;
+            position: relative;
+            width: 25%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+        }
+
+        &:not(:last-child) {
+            @include respond(tab-port) {
+                margin-right: 2rem;
+            }
+        }
+
         &--p1 {
             top: -2rem;
             left: 0rem;
+
+            @include respond(tab-port) {
+                top: 7rem;
+                left: 4rem;
+            }
         }
 
         &--p2 {
             top: 2rem;
             right: 4rem;
+
+            @include respond(tab-port) {
+                top: 0;
+                right: 0;
+                z-index: 100;
+            }
         }
 
         &--p3 {
             top: 10rem;
             left: 20%;
+
+            @include respond(tab-port) {
+                top: 7rem;
+                left: -4rem;
+            }
         }
 
         &:hover {
