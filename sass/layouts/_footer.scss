@@ -71,5 +71,17 @@
         text-align: center;
         border-top: 1px solid $color-grey-dark;
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+        & a {
+            @include respond(tab-port) {
+                display: block !important;
+            }
+        }
+
+        &--paddbo-removed {
+            padding-bottom: 0;
+        }
     }
+
+    
 }
